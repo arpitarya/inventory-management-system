@@ -1,0 +1,51 @@
+<?php
+session_start();
+if(!isset($_SESSION["username"]))
+      header("Location: login.html");  
+?>
+
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="css/login.css" type="text/css">
+<style type="text/css">
+  #in{
+    color: #E9181C;
+    font-size: 14px;
+	font-weight:bold;
+  }
+  
+</style>
+  </head>
+
+  <body>
+<div class="top"></div>
+    <div id="login">
+    <p class="head">Inventory Management System</p>
+  <form id="form1" name="form1" method="POST" action="login.php">
+  
+    <div class="field_container">
+      <input type="text" placeholder="username" name="username" id="username" required>
+    </div>
+    
+    <div class="field_container">
+      <input type="Password" placeholder="password" name="password" id="password" required>
+      <button id="sign_in_button" type="submit">
+        <span class="button_text">Sign In</span>
+      </button>
+    </div>
+    
+        <div>
+          <label id="in">Invalid username or password</label>
+        </div>
+        <div class="clearfix"></div>
+</form>
+  
+</div>
+    <div class="bottom"></div>
+    <p class="ntcc">NTCC PROJECT 2015</p>
+  </body>
+</html>
